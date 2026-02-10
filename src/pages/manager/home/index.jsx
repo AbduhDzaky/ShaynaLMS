@@ -1,9 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import Courses from "./Courses";
+import Courses from "./courses";
 import Students from "./students";
 
-export default function ManagerHome() {
+export default function ManagerHomePage() {
   return (
     <>
       <header className="flex items-center justify-between gap-[30px]">

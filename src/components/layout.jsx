@@ -1,8 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
 import Sidebar from "./sidebar";
 import Header from "./header";
-import Courses from "../pages/ManagerHome/Courses";
-import Students from "../pages/ManagerHome/students";
+import Courses from "../pages/manager/home/courses";
+import Students from "../pages/manager/home/students";
 
 export default function LayoutDashoard() {
   return (
