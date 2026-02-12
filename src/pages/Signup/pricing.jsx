@@ -36,7 +36,7 @@ export default function Pricing() {
           We delivery robust features to anyone unconditionally.
         </p>
       </header>
-      <div className="grid grid-cols-2 gap-[30px] max-w-[840px] mx-auto mt-[60px]">
+      <div className="grid grid-cols-2 gap-[30px] max-w-[840px] mx-auto mt-[60px] mb-[25px]">
         <div className="card flex flex-col h-fit rounded-[20px] border border-[#262A56] p-[30px] gap-[30px] bg-[#080A2A]">
           <img
             src="/assets/images/icons/note-favorite-white.svg"
