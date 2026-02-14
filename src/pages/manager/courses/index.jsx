@@ -34,6 +34,8 @@ export default function ManageCoursePage() {
         className="flex flex-col w-full rounded-[30px] p-[30px] gap-[30px] bg-[#F8FAFB]"
       >
         <CardCourse />
+        <CardCourse />
+        <CardCourse />
         {/* <div id="Pagination" className="flex items-center gap-3">
           <button
             type="button"
