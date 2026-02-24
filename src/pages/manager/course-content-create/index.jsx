@@ -1,6 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
+import { CKEditor } from "@ckeditor/ckeditor5-react";
+import {
+  ClassicEditor,
+  Bold,
+  Essentials,
+  Heading,
+  Indent,
+  IndentBlock,
+  Italic,
+  Link,
+  List,
+  MediaEmbed,
+  Paragraph,
+  Table,
+  Undo,
+} from "ckeditor5";
 
-export default function CourseContentCreatePage() {
+import "ckeditor5/ckeditor5.css";
+
+export default function ManageContentCreatePage() {
+  const [content, setContent] = useState("");
+
   return (
     <>
       <div
@@ -17,6 +37,7 @@ export default function CourseContentCreatePage() {
           Add Content
         </span>
       </div>
+
       <header className="flex items-center justify-between gap-[30px]">
         <div className="flex items-center gap-[30px]">
           <div className="flex shrink-0 w-[150px] h-[100px] rounded-[20px] overflow-hidden bg-[#D9D9D9]">
@@ -36,6 +57,7 @@ export default function CourseContentCreatePage() {
           </div>
         </div>
       </header>
+
       <form
         action="manage-course-materi.html"
         className="flex flex-col w-[930px] rounded-[30px] p-[30px] gap-[30px] bg-[#F8FAFB]"
@@ -60,6 +82,7 @@ export default function CourseContentCreatePage() {
             />
           </div>
         </div>
+
         <div className="flex flex-col gap-[10px]">
           <label htmlFor="type" className="font-semibold">
             Select Type
@@ -89,6 +112,7 @@ export default function CourseContentCreatePage() {
             />
           </div>
         </div>
+
         <div className="flex flex-col gap-[10px]">
           <label htmlFor="video" className="font-semibold">
             Youtube Video ID
@@ -111,9 +135,51 @@ export default function CourseContentCreatePage() {
 
         <div className="flex flex-col gap-[10px]">
           <label className="font-semibold">Content Text</label>
-          {/* <div id="editor">
-                    </div>                 */}
+
+          <CKEditor
+            editor={ClassicEditor}
+            data={content}
+            onChange={(event, editor) => {
+              setContent(editor.getData());
+            }}
+            config={{
+              licenseKey: "GPL",
+              toolbar: [
+                "undo",
+                "redo",
+                "|",
+                "heading",
+                "|",
+                "bold",
+                "italic",
+                "|",
+                "link",
+                "insertTable",
+                "mediaEmbed",
+                "|",
+                "bulletedList",
+                "numberedList",
+                "indent",
+                "outdent",
+              ],
+              plugins: [
+                Bold,
+                Essentials,
+                Heading,
+                Indent,
+                IndentBlock,
+                Italic,
+                Link,
+                List,
+                MediaEmbed,
+                Paragraph,
+                Table,
+                Undo,
+              ],
+            }}
+          />
         </div>
+
         <div className="flex items-center gap-[14px]">
           <button
             type="submit"

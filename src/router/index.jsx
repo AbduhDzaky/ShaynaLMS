@@ -7,7 +7,7 @@ import LayoutDashoard from "../components/layout";
 import ManageCoursePage from "../pages/manager/courses";
 import ManageCreateCoursePage from "../pages/manager/create-course";
 import ManagerCourseDetailPage from "../pages/manager/course-detail";
-import CourseContentCreatePage from "../pages/manager/course-content-create";
+import ManageContentCreatePage from "../pages/manager/course-content-create";
 
 const router = createBrowserRouter([
   {
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/manager/courses/:id/create",
-        element: <CourseContentCreatePage />,
+        element: <ManageContentCreatePage />,
       },
     ],
   },

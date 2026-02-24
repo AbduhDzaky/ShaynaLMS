@@ -1,5 +1,5 @@
 import React from "react";
-import ContentItem from "./content-item";
+import ContentItemPage from "./content-item";
 import { Link } from "react-router-dom";
 
 export default function TableContent() {
@@ -17,8 +17,8 @@ export default function TableContent() {
           Add Content
         </Link>
       </div>
-      <ContentItem type="text" />
-      <ContentItem type="video" />
+      <ContentItemPage type="text" />
+      <ContentItemPage type="video" />
       {/* <div id="Pagination" className="flex items-center gap-3">
         <button
           type="button"

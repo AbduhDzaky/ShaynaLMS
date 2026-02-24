@@ -56,7 +56,7 @@ export default function ContentItemPage({
   );
 }
 
-ContentItem.propTypes = {
+ContentItemPage.propTypes = {
   id: Proptypes.number,
   index: Proptypes.number,
   type: Proptypes.string,
