@@ -124,9 +124,9 @@ export default function ManageCreateCoursePage() {
               <option value="" hidden>
                 Choose one category
               </option>
-              <option value="">test</option>
-              <option value="">test</option>
-              <option value="">test</option>
+              <option value="">Video</option>
+              <option value="">Text</option>
+              <option value="">Resource</option>
             </select>
             <img
               src="/assets/images/icons/arrow-down.svg"
